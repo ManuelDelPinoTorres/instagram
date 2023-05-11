@@ -30,8 +30,8 @@ public class Foto {
 
     public Foto(String id, LocalDate fechaCreacion) {
         this.id = id;
-        this.setEtiquetados(etiquetados);
-        this.setFechaCreacion(LocalDate.now());
+        this.setEtiquetados(new ArrayList<>());
+        this.setFechaCreacion(fechaCreacion);
         this.setLikes(new ArrayList<>());
     }
 
@@ -65,5 +65,10 @@ public class Foto {
 
     public void setLikes(ArrayList<Usuario> likes) {
         this.likes = likes;
+    }
+
+    @Override
+    public String toString() {
+        return "\n{Foto \n" + "Identificador: " + this.id + "\n" + "Fecha creacion: " + this.fechaCreacion + "\n}";
     }
 }

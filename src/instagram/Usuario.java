@@ -18,7 +18,6 @@ public class Usuario {
     private ArrayList<Usuario> seguidores;
     private ArrayList<Usuario> seguidos;
 
-    /*DECIR PORQUE HE USADO ARRAY LIST*/
     public Usuario(String email, String password) {
         this.setEmail(email);
         this.setPassword(password);
@@ -72,4 +71,8 @@ public class Usuario {
         return this.password.equalsIgnoreCase(password);
     }
 
+    @Override
+    public String toString() {
+        return "Usuario:" + this.email;
+    }
 }
