@@ -5,7 +5,6 @@
 package instagram;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.ArrayList;
 
 /**
@@ -14,7 +13,14 @@ import java.util.ArrayList;
  */
 public class Foto {
 
+    //Me decanto en fotos por usar un arraylist como coleccion para 
+    //introducir dinamicacmente los usuarios en etiquetados y likes 
+    //ademas de poder tener asi un orden
+    //Las variables decido que sean privadas para que solo se pueda
+    //acceder a ellas desde la misma clase, obligando asi a usar metodos get y set.
     private String id;
+    //uso localDate para quedarme facilmente con la fecha de creacion
+    //ya que considero que es la forma mas comoda de trabajar con fechas en Java.
     private LocalDate fechaCreacion;
     private ArrayList<Usuario> etiquetados;
     private ArrayList<Usuario> likes;
@@ -34,6 +40,7 @@ public class Foto {
         this.setFechaCreacion(fechaCreacion);
         this.setLikes(new ArrayList<>());
     }
+//getters y setters para acceder y modificar la informacion.
 
     public String getId() {
         return this.id;
@@ -67,6 +74,8 @@ public class Foto {
         this.likes = likes;
     }
 
+    //Sobreescribo el metodo toString de la clase foto para poder 
+    //sacar la informacion que deseo por pantalla
     @Override
     public String toString() {
         return "\n{Foto \n" + "Identificador: " + this.id + "\n" + "Fecha creacion: " + this.fechaCreacion + "\n}";

@@ -61,22 +61,20 @@ public class main {
         //valores correctos
         System.out.println(plataforma.etiquetarUsuario("saul@gmail.com", "admin1234", "A000", "oscar@gmail.com"));
         System.out.println(plataforma.etiquetarUsuario("saul@gmail.com", "admin1234", "A001", "oscar@gmail.com"));
-        //compruebo si se esta etiquetando bien en la unica foto que tiene saul
-        System.out.println(plataforma.getUsuariosPlataforma().get(plataforma.existeUsuario("saul@gmail.com")).getFotos().get(0).getEtiquetados().toString());
-        
+
         //Mostrar fotos
         //valores correctos
         System.out.println(plataforma.mostrarFotosUsuario("saul@gmail.com", "admin1234"));
         //valores gmail incorrectos
         System.out.println(plataforma.mostrarFotosUsuario("sal@gmail.com", "admin1234"));
-        
+
         //valores password incorrectos
         System.out.println(plataforma.mostrarFotosUsuario("sal@gmail.com", "admin123"));
-        
+
         //Mostrar fotos etiquetadas
         System.out.println("FOTOS ETIQUETADAS");
         System.out.println(plataforma.mostrarFotosEtiquetado("oscar@gmail.com", "admin1234"));
-    
+
     }
 
 }
